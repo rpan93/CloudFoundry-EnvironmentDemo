@@ -57,6 +57,7 @@ public class IndexController {
 			model.addAttribute("isCloudEnvironment",false);
 		} else {
 			model.addAttribute("isCloudEnvironment",true);
+			model.addAttribute("whoAmI","ron");
 			model.addAttribute("vcapApplication", cloud.getApplicationInstanceInfo().getProperties());
 			logger.info("VCAP_SERVICES [{}] ", vcapServices);
 			logger.info("VCAP_APPLICATION [{}] ", System.getenv("VCAP_APPLICATION"));
@@ -67,7 +68,6 @@ public class IndexController {
 		return "index";
 	}
 	
-
 	@RequestMapping(value = "/environment", method = RequestMethod.GET)
 	public String environment(Model model) throws Exception {
 			
