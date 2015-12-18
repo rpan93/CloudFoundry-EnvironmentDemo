@@ -25,6 +25,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 @Controller
 public class IndexController {
 	
+	
 	private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
 	
